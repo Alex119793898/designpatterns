@@ -1,6 +1,6 @@
 package com.caoliang.strategy;
 
-public class Dog implements Comparable{
+public class Dog implements Comparable<Dog>{
 
     int food;
 
@@ -8,8 +8,7 @@ public class Dog implements Comparable{
         this.food = food;
     }
 
-    public int compareTo(Object o){
-        Dog d = (Dog)o;
+    public int compareTo(Dog d){
         if(food < d.food) return -1;
         else if(food > d.food) return 1;
         else return 0;
