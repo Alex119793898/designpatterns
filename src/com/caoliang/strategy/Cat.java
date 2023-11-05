@@ -1,6 +1,6 @@
 package com.caoliang.strategy;
 
-public class Cat {
+public class Cat implements Comparable{
     int weight, height;
 
     public Cat(int weight, int height) {
@@ -8,7 +8,8 @@ public class Cat {
         this.height = height;
     }
 
-    public int compareTo(Cat c){
+    public int compareTo(Object o){
+        Cat c = (Cat)o;
         if(weight < c.weight) return -1;
         if(weight > c.weight) return 1;
         else return 0;
